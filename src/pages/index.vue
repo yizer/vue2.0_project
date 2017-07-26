@@ -15,8 +15,8 @@
           <h2>最新消息</h2>
           <ul>
             <li v-for="item in newsList">
-              <a :href ="item.url">
-              {{ item.name }}
+              <a :href ="item.url" class="new-item">
+              {{ item.title }}
               </a>
             </li>
           </ul>
@@ -44,10 +44,10 @@
     export default {
       name: 'IndexPage',
       created: function () {
-        this.$http.post('getList',{userId:123})
-        .then(function () {
-
-        },function(err){
+        this.$http.get('api/getNewsList')
+        .then((res) => {
+          this.newsList = res.data
+        },(err) =>{
           console.log(err);
         })
       },
