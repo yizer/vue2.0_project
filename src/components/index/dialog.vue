@@ -1,10 +1,9 @@
 <template>
   <div>
     <div class="dialog-wrap" v-if = "isShow">
-      <div class="dialog-cover"  v-if = "isShow" @click = "onClose()"></div>
+      <div class="dialog-cover"  v-if = "isShow" @click = "closeMyself"></div>
       <div class="dialog-content"  v-if = "isShow">
-        <p class="dialog-close" @click = "onClose()">X</p>
-        hello
+        <p class="dialog-close" @click = "closeMyself">X</p>
         <slot>empty</slot>
       </div>
     </div>
@@ -19,8 +18,8 @@
       }
     },
     methods: {
-      onClose () {
-        this.$emit('onClose')
+      closeMyself () {
+        this.$emit('on-close')
       }
     }
   }

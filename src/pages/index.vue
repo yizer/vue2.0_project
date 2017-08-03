@@ -44,16 +44,14 @@
     </div>
 </template>
 <script>
-import slideShow from "../components/slideshow.vue"
+import slideShow from "../components/index/slideshow.vue"
     export default {
       components: {
         slideShow,
 
       },
       methods: {
-        dosomething () {
-            console.log('这是来自子组件的问候');
-        }
+
       },
       name: 'IndexPage',
       created: function () {
@@ -167,6 +165,11 @@ import slideShow from "../components/slideshow.vue"
               ]
             }
           }
+        }
+      },
+      methods: {
+        dosomething () {
+
         }
       }
      }

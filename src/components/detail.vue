@@ -34,9 +34,9 @@
      </div>
 </template>
 <script>
-import MyDialog  from "./index/dialog.vue"
-import LogForm from "./index/logForm.vue"
-import RegForm from "./index/regForm.vue"
+import MyDialog  from "./dialog.vue"
+import LogForm from "./logForm.vue"
+import RegForm from "./regForm.vue"
     export default {
       components:{
         MyDialog,
